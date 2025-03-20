@@ -2,6 +2,13 @@ version = 1
 revision = 1
 requires-python = ">=3.13"
 
+[manifest]
+members = [
+    "backend",
+    "frontend",
+    "sandbox",
+]
+
 [[package]]
 name = "alembic"
 version = "1.15.1"
@@ -37,6 +44,17 @@ sdist = { url = "https://files.pythonhosted.org/packages/95/7d/4c1bd541d4dffa1b5
 wheels = [
     { url = "https://files.pythonhosted.org/packages/a1/ee/48ca1a7c89ffec8b6a0c5d02b89c305671d5ffd8d3c94acf8b8c408575bb/anyio-4.9.0-py3-none-any.whl", hash = "sha256:9f76d541cad6e36af7beb62e978876f3b41e3e04f2c1fbf0884604c0a9c4d93c", size = 100916 },
 ]
+
+[[package]]
+name = "backend"
+version = "0.1.0"
+source = { virtual = "backend" }
+dependencies = [
+    { name = "fastapi", extra = ["standard"] },
+]
+
+[package.metadata]
+requires-dist = [{ name = "fastapi", extras = ["standard"], specifier = ">=0.115.11" }]
 
 [[package]]
 name = "bidict"
@@ -242,6 +260,17 @@ wheels = [
 standard = [
     { name = "uvicorn", extra = ["standard"] },
 ]
+
+[[package]]
+name = "frontend"
+version = "0.1.0"
+source = { virtual = "frontend" }
+dependencies = [
+    { name = "reflex" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "reflex", specifier = ">=0.7.3" }]
 
 [[package]]
 name = "greenlet"
@@ -853,16 +882,6 @@ wheels = [
 name = "sandbox"
 version = "0.1.0"
 source = { virtual = "." }
-dependencies = [
-    { name = "fastapi", extra = ["standard"] },
-    { name = "reflex" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "fastapi", extras = ["standard"], specifier = ">=0.115.11" },
-    { name = "reflex", specifier = ">=0.7.3" },
-]
 
 [[package]]
 name = "secretstorage"
