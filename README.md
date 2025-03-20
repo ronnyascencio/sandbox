@@ -31,7 +31,7 @@ This project is a web application built with Python, utilizing FastAPI for the b
 1.  Clone the repository:
 
     ```bash
-    git clone [https://github.com/dserodio?tab=repositories](https://github.com/dserodio?tab=repositories)
+    git clone [https://github.com/ronnyascencio/sandbox.git](https://github.com/ronnyascencio/sandbox.git)
     cd sandbox
     ```
 
@@ -43,11 +43,11 @@ This project is a web application built with Python, utilizing FastAPI for the b
 
 3.  Set up the database:
 
-    - Crea una base de datos con el nombre que desees.
-    - Configura las variables de entorno para la conexión a la base de datos (por ejemplo, en un archivo `.env`):
+    - Create a database with the name you desire.
+    - Configure the environment variables for the database connection (e.g., in a `.env` file):
 
     ```
-    DATABASE_URL=postgresql://usuario:contraseña@servidor/basededatos
+    DATABASE_URL=postgresql://user:password@server/database
     ```
 
 4.  Run the application:
